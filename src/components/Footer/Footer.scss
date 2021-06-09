@@ -1,0 +1,31 @@
+.footr {
+    background-color: #3172be;
+    padding: 30px 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__logo {
+        position: relative;
+        width: fit-content;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+
+    &__news {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-style: italic;
+        color: white;
+    }
+
+    &__tagline {
+        color: white;
+        font-weight: 700;
+        font-size: large;
+        min-width: 60%;
+    }
+}

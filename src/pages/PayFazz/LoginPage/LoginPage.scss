@@ -1,0 +1,57 @@
+.loginPage {
+    &__container {
+        width: 100%;
+        max-width: 500px;
+        background-color: white;
+        margin: 30px auto;
+        padding: 30px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        color: #1a1a1a;
+        text-align: center;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        input {
+            height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        label {
+            padding: 5px 0;
+        }
+    }
+
+    &__errorMsg {
+        color: red;
+        font-size: small;
+    }
+
+    &__submit {
+        background: #18ba62;
+        color: white;
+        border: none;
+        height: 50px;
+        margin: 30px 0;
+        cursor: pointer;
+    }
+
+    &__hasAccount {
+        cursor: pointer;
+        font-weight: 700;
+
+        &:hover {
+            color: #3172be;
+        }
+    }
+}
