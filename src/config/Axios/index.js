@@ -1,4 +1,6 @@
 import axios from "axios";
+import store from "redux/store";
+import { SET_ERROR } from "constants/initialType";
 
 const instance = axios.create({
   baseURL: `${process.env.REACT_APP_AUTH_URL}`,
@@ -11,5 +13,14 @@ instance.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded;c
 instance.defaults.headers.common = {
   "X-API-Key": `${process.env.REACT_APP_NEWS_API_KEY}`,
 };
+
+instance.interceptors.response.use(
+  (response) => response,
+  (err) => {
+    console.log(err.message);
+    store.dispatch({ type: SET_ERROR, payload: err.message || "newsapi.org : For Developer Plan, Request can be made by browser via localhost only. Visit https://newsapi.org/pricing" });
+    return Promise.reject(err);
+  },
+);
 
 export default instance;
