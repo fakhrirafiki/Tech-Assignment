@@ -7,6 +7,7 @@ const instance = axios.create({
   // },
 });
 
+instance.defaults.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8";
 instance.defaults.headers.common = {
   "X-API-Key": `${process.env.REACT_APP_NEWS_API_KEY}`,
 };
