@@ -17,8 +17,9 @@ instance.defaults.headers.common = {
 instance.interceptors.response.use(
   (response) => response,
   (err) => {
+    const errorMsg = "newsapi.org : For Developer Plan, Request can be made by browser via localhost only. Visit https://newsapi.org/pricing";
     console.log(err.message);
-    store.dispatch({ type: SET_ERROR, payload: err.message || "newsapi.org : For Developer Plan, Request can be made by browser via localhost only. Visit https://newsapi.org/pricing" });
+    store.dispatch({ type: SET_ERROR, payload: err.message === "Network Error" ? errorMsg : err.message });
     return Promise.reject(err);
   },
 );
