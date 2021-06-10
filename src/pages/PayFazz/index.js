@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import NewsList from "components/NewsList";
+import HomePageNewsContainer from "components/Containers/HomePageNewsContainer";
 import CategoryPage from "pages/PayFazz/category";
 import LoginPage from "pages/PayFazz/LoginPage";
 
@@ -21,11 +22,14 @@ function PayFazz() {
           <Route path="/search/:search">
             <CategoryPage />
           </Route>
+          <Route path="/categories">
+            <NewsList />
+          </Route>
           <Route path="/:category">
             <CategoryPage />
           </Route>
           <Route path="/">
-            <NewsList />
+            <HomePageNewsContainer />
           </Route>
         </Switch>
       </div>

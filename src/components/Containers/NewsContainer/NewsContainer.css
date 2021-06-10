@@ -1,0 +1,31 @@
+.NewsContainer {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  padding: 3px 15px;
+}
+.NewsContainer__heading {
+  border-left: 7px solid red;
+  padding-left: 15px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #000;
+  cursor: pointer;
+}
+.NewsContainer__hr {
+  border-top: 1px solid lightgrey;
+  border-bottom: 0px solid lightgrey;
+  border-right: 0px solid lightgrey;
+  border-left: 0px solid lightgrey;
+}
+.NewsContainer__seeMore {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: small;
+  cursor: pointer;
+  font-weight: 700;
+}
+.NewsContainer__seeMore:hover {
+  color: #3172be;
+}

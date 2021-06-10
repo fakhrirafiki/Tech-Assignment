@@ -17,7 +17,6 @@ function App() {
       fire.auth().onAuthStateChanged((user) => {
         if (user) {
           dispatch(setUser(user));
-          console.log("listenning...");
           history.push("/");
         }
         if (!user) dispatch(setUser(null));

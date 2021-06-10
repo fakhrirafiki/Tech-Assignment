@@ -1,0 +1,71 @@
+.btn {
+  border-radius: 8px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin: 10px 5px;
+  padding: 16px 32px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.btn:hover {
+  box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.btn[disabled] {
+  background-color: #aeb8c0;
+  border: 1px solid #aeb8c0;
+}
+.btn--primary {
+  border: 1px solid #18ba62;
+  background: #18ba62;
+}
+.btn--secondary {
+  border: 1px solid #3172be;
+  background: #3172be;
+}
+.btn--warning {
+  border: 1px solid #f87526;
+  background: #f87526;
+}
+.btn--danger {
+  border: 1px solid #fd3b37;
+  background: #fd3b37;
+}
+.btn--white {
+  border: 1px solid white;
+  background: white;
+  color: unset;
+}
+.btn--white:hover {
+  box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.15);
+}
+.btn--small {
+  height: 40px;
+  padding: 0 30px;
+  font-size: 10px;
+}
+.btn__text {
+  font-size: 14px;
+  font-weight: bold;
+}
+.btn__text + .btn__icon, .btn__icon + .btn__text {
+  margin-left: 5px;
+}
+.btn__icon {
+  position: relative;
+  bottom: 2px;
+  width: 20px;
+}
+.btn__icon--spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}

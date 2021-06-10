@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "config/Axios";
 
-import "./category.scss";
+import "./category.css";
 
 import CardTitleNews from "components/CardTitleNews";
 
@@ -43,22 +43,11 @@ function CategoryPage() {
   return (
     <div className="CategoryPage">
       <h2 className="CategoryPage__heading">{category?.toUpperCase()}</h2>
-      {search && (
-        <h2 className="CategoryPage__heading">
-          Result for: {search?.toUpperCase()}
-        </h2>
-      )}
+      {search && <h2 className="CategoryPage__heading">Result for: {search?.toUpperCase()}</h2>}
       {isError && <p className="error">Ouups...! Something went wrong</p>}
       {isLoading && <p className="loading">Loading...</p>}
 
-      {!isLoading && (
-        <div className="CategoryPage__newsWrapper">
-          {news.length > 0 &&
-            news.map((news, index) => (
-              <CardTitleNews key={news.publishedAt + index} news={news} />
-            ))}
-        </div>
-      )}
+      {!isLoading && <div className="CategoryPage__newsWrapper">{news.length > 0 && news.map((news, index) => <CardTitleNews key={news.publishedAt + index} news={news} />)}</div>}
     </div>
   );
 }

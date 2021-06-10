@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import fire from "config/firebase";
-import "./LoginPage.scss";
-import { logInWithEmailPassword, signUpWithEmailPassword } from "redux/actions";
+import "./LoginPage.css";
 
 function LoginPage({ register }) {
   const [email, setEmail] = useState("");

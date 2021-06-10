@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 import { UserIcon } from "assets";
-import "./CardTitleNews.scss";
+import "./CardTitleNews.css";
 
 function CardTitleNews({ news }) {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { LoopIcon } from "assets";
-import "./Button.scss";
+import "./Button.css";
 
 function Button(props) {
   const { primary, secondary, warning, danger, small, hasSpinner, white } =

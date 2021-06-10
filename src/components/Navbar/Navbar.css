@@ -1,0 +1,141 @@
+.navbr {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+  min-height: 60px;
+  padding: 10px 5% 3px;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.navbr__logo {
+  position: relative;
+  top: 7px;
+}
+.navbr__news {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-style: italic;
+  opacity: 0.5;
+}
+.navbr__searchBar {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 600px;
+  min-width: 400px;
+}
+@media only screen and (max-width: 768px) {
+  .navbr__searchBar {
+    margin: 10px 0;
+    max-width: 100%;
+    min-width: unset;
+  }
+}
+.navbr__burgerMenu {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .navbr__burgerMenu {
+    display: block;
+  }
+}
+.navbr__category {
+  display: flex;
+  justify-content: flex-start;
+  margin: 10px 2px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .navbr__category {
+    display: none;
+  }
+}
+.navbr__textCategory {
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.navbr__textCategory:hover {
+  color: #3172be;
+}
+.navbr__authBtn {
+  display: flex;
+}
+.navbr__authBtn--desktop {
+  margin-right: auto;
+}
+@media only screen and (max-width: 768px) {
+  .navbr__authBtn--desktop {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbr__authBtn--mobile {
+    margin: auto;
+    padding: 10px 0;
+    justify-content: center;
+    border-bottom: 1px solid #d3d3d345;
+    border-top: 1px solid #d3d3d345;
+  }
+}
+.navbr__user {
+  display: flex;
+  align-items: center;
+}
+.navbr__user--icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.navbr__user--logout {
+  margin-left: 10px;
+  font-size: small;
+  cursor: pointer;
+}
+.navbr__user--logout:hover {
+  color: #3172be;
+}
+.navbr__overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: black;
+  width: 100%;
+  z-index: 2;
+  height: 100vh;
+  opacity: 0.2;
+}
+.navbr__mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: white;
+  height: 100vh;
+  z-index: 3;
+  max-width: 500px;
+  width: 80%;
+  transition: all 0.3s ease;
+}
+.navbr__mobileHeader {
+  display: flex;
+  align-items: center;
+}
+.navbr__mobileUnorderedList {
+  list-style: none;
+}
+.navbr__mobileUnorderedList li {
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.navbr__mobileUnorderedList li:hover {
+  color: #3172be;
+}
+.navbr__close {
+  margin: 10px;
+  cursor: pointer;
+}

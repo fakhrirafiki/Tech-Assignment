@@ -1,6 +1,6 @@
 import React from "react";
-import "./Footer.scss";
 import { LogoPayFazzWhite } from "assets";
+import "./Footer.css";
 
 function Footer() {
   return (

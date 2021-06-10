@@ -7,7 +7,7 @@ import Button from "components/Button";
 import { LogoPayFazz, BurgerMenuIcon, CloseImg, UserIcon } from "assets";
 import { toggleSidebar, userLoggedOut } from "redux/actions";
 
-import "./Navbar.scss";
+import "./Navbar.css";
 
 function Navbar() {
   const isSidebarActive = useSelector((state) => state.isSidebarActive);
@@ -15,7 +15,7 @@ function Navbar() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const categoryArr = ["Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"];
+  const categoryArr = ["Categories", "Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"];
 
   const handleToggleSidebar = () => {
     dispatch(toggleSidebar());
@@ -39,7 +39,6 @@ function Navbar() {
     history.push("/login");
   };
 
-  console.log(user);
   return (
     <div className="navbr" style={{ overflow: isSidebarActive ? "unset" : "hidden" }} role="navigation" aria-label="main navigation">
       <div className="navbr__logo">

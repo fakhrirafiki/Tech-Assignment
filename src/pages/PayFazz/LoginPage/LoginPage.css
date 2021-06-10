@@ -1,0 +1,46 @@
+.loginPage__container {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  margin: 30px auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.loginPage__heading {
+  color: #1a1a1a;
+  text-align: center;
+}
+.loginPage__input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.loginPage__input input {
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.loginPage__input label {
+  padding: 5px 0;
+}
+.loginPage__errorMsg {
+  color: red;
+  font-size: small;
+}
+.loginPage__submit {
+  background: #18ba62;
+  color: white;
+  border: none;
+  height: 50px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+.loginPage__hasAccount {
+  cursor: pointer;
+  font-weight: 700;
+}
+.loginPage__hasAccount:hover {
+  color: #3172be;
+}
